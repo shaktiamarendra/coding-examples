@@ -23,7 +23,7 @@ class ProductFeedback:
     def get_ordered_products(self, descending=True):
         """Returns products ordered by average feedback score, then alphabetically."""
         sorted_products = sorted(
-            self.feedback_data.items(), #.items() converts it into a list of tuples where Each tuple has the format: ("product_name", [list_of_feedback_scores]).This is needed as Sorting a dictionary directly is not possible because dictionaries don't have a built-in sorting method.The .items() method converts a dictionary into a list of (key, value) tuples, which allows sorting based on custom criteria
+            self.feedback_data.items(), #.items() converts dictionary into a list of tuples where each tuple has the format: ("product_name", [list_of_feedback_scores]).This is needed as Sorting a dictionary directly is not possible because dictionaries don't have a built-in sorting method.The .items() method converts a dictionary into a list of (key, value) tuples, which allows sorting based on custom criteria
             # This function takes an item from self.feedback_data.items(), e.g., ("Laptop", [4.5, 4.0]). item[1] refers to the list of feedback scores. sum(item[1]) / len(item[1]) computes the average feedback score for the product.Using -sum() ensures his ensures highest feedback scores come first, while still using alphabetical ordering in case of ties.
             key=lambda item: (-sum(item[1]) / len(item[1]), item[0]) if descending 
                             else (sum(item[1]) / len(item[1]), item[0])
@@ -46,7 +46,7 @@ if __name__ == "__main__":
     # Asking feedback from user
     while True:
         # Taking input from user
-        user_input = input("Enter product name and feedback (or type 'Enough' to stop): ").rsplit(maxsplit=1)
+        user_input = input("Enter product name and feedback (or type 'Enough' to stop): ").rsplit(maxsplit=1) #rsplit is used to take care of whitespaces in the product names
         
         # Check for exit condition
         if user_input[0].strip().lower() == "enough":
