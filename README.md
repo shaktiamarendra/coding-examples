@@ -4,4 +4,4 @@
 - [[List](https://github.com/shaktiamarendra/coding-examples/blob/main/Data%20Structure1-%20Lists.py)]
 - [[Product Feedback](https://github.com/shaktiamarendra/coding-examples/blob/main/Product%20Feedback.py)]
 
-📝 **[Visit My Blog](https://github.com/shaktiamarendra/coding-examples/tree/main)**  
+📝 **[Visit My Blog](https://github.com/shaktiamarendra)**  
